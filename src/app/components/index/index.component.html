@@ -2,48 +2,100 @@
 <section id="intro" class="intro">
   <div class="intro-content">
     <div class="container">
+
+
       <div class="row">
-        <div class="col-lg-6">
-          <div class="wow fadeInDown" data-wow-offset="0" data-wow-delay="0.1s">
-            <h2 class="h-ultra">Medicio medical group</h2>
-          </div>
-          <div class="wow fadeInUp" data-wow-offset="0" data-wow-delay="0.1s">
-            <h4 class="h-light">
-              Provide
-              <span class="color">best quality healthcare</span> for you
-            </h4>
-          </div>
+
+        <div class="col-lg-7">
+
           <div class="well well-trans">
             <div class="wow fadeInRight" data-wow-delay="0.1s">
               <ul class="lead-list">
                 <li>
-                  <span class="fa fa-check fa-2x icon-success"></span>
-                  <span class="list"
-                    ><strong>Affordable monthly premium packages</strong
-                    ><br />Lorem ipsum dolor sit amet, in verterem persecuti
-                    vix, sit te meis</span
-                  >
+                  <div class="row">
+                    <div class="col-md-10 mx-auto ">  <span class="list"
+                      ><strong>¿Qué tipo de vacunas se tiene?</strong> </span
+                    > </div>
+                    <div class="col-md-1"> <button type="button" class="btn btn-info m" (click)="submit(1)">Info</button> </div>
+                  </div>
                 </li>
                 <li>
-                  <span class="fa fa-check fa-2x icon-success"></span>
-                  <span class="list"
-                    ><strong>Choose your favourite doctor</strong><br />Sit zril
-                    sanctus scaevola ei, ea usu movet graeco</span
-                  >
+                  <div class="row">
+                    <div class="col-md-10 mx-auto ">  <span class="list"
+                      ><strong>¿Qué personas van a tomar su primera dosis?</strong> </span
+                    > </div>
+                    <div class="col-md-1"> <button type="button" class="btn btn-info m" (click)="submit(2)">Info</button> </div>
+                  </div>
                 </li>
                 <li>
-                  <span class="fa fa-check fa-2x icon-success"></span>
-                  <span class="list"
-                    ><strong>Only use friendly environment</strong><br />Wisi
-                    lobortis eos ex, per at movet delectus, qui no vocent
-                    deleniti</span
-                  >
+                  <div class="row">
+                    <div class="col-md-10 mx-auto ">  <span class="list"
+                      ><strong>¿Cuántas vacunas existen?</strong> </span
+                    > </div>
+                    <div class="col-md-1"> <button type="button" class="btn btn-info m" (click)="submit(3)">Info</button> </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="row">
+                    <div class="col-md-10 mx-auto ">  <span class="list"
+                      ><strong>¿Qué médico administró la dosis de la persona?</strong> </span
+                    > </div>
+                    <div class="col-md-1"> <button type="button" class="btn btn-info m" (click)="submit(4)">Info</button> </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="row">
+                    <div class="col-md-10 mx-auto ">  <span class="list"
+                      ><strong>¿Qué vacuna recibieron las personas?</strong> </span
+                    > </div>
+                    <div class="col-md-1"> <button type="button" class="btn btn-info m" (click)="submit(5)">Info</button> </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="row">
+                    <div class="col-md-10 mx-auto ">  <span class="list"
+                      ><strong>¿Cuales fueron las personas vacunadas con Sinovac?</strong> </span
+                    > </div>
+                    <div class="col-md-1"> <button type="button" class="btn btn-info m" (click)="submit(6)">Info</button> </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="row">
+                    <div class="col-md-10 mx-auto ">  <span class="list"
+                      ><strong>¿Cuales son las personas que van a tomar su segunda vacuna?</strong> </span
+                    > </div>
+                    <div class="col-md-1"> <button type="button" class="btn btn-info m" (click)="submit(7)">Info</button> </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="row">
+                    <div class="col-md-10 mx-auto ">  <span class="list"
+                      ><strong>¿A qué centro de vacunación asistió la persona?</strong> </span
+                    > </div>
+                    <div class="col-md-1"> <button type="button" class="btn btn-info m" (click)="submit(8)">Info</button> </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="row">
+                    <div class="col-md-10 mx-auto ">  <span class="list"
+                      ><strong>¿Cuántas personas van a recibir la vacuna de refuerzo?</strong> </span
+                    > </div>
+                    <div class="col-md-1"> <button type="button" class="btn btn-info m" (click)="submit(9)">Info</button> </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="row">
+                    <div class="col-md-10 mx-auto ">  <span class="list"
+                      ><strong>¿Qué personas corresponden a tal fecha?</strong> </span
+                    > </div>
+                    <div class="col-md-1"> <button type="button" class="btn btn-info m" (click)="submit(10)">Info</button> </div>
+                  </div>
                 </li>
               </ul>
             </div>
           </div>
         </div>
-        <div class="col-lg-6">
+        <div class="col-lg-5 mt-3">
           <div class="form-wrapper">
             <div
               class="wow fadeInRight"
@@ -58,6 +110,39 @@
                   </h3>
                 </div>
                 <div class="panel-body">
+                  <table class="table">
+                    <thead>
+                      <tr  >
+                        <th scope="col" *ngIf="resultValidation.item?resultValidation.item:false">Item</th>
+                        <th scope="col" *ngIf="resultValidation.Medico">Medico</th>
+                        <th scope="col" *ngIf="resultValidation.Usuario">Usuario</th>
+                        <th scope="col" *ngIf="resultValidation.Nombre">Nombre</th>
+                        <th scope="col" *ngIf="resultValidation.Centro">Centro</th>
+                        <th scope="col" *ngIf="resultValidation.Edad">Edad</th>
+                        <th scope="col" *ngIf="resultValidation.Fecha_inicio">Fecha_inicio</th>
+                        <th scope="col" *ngIf="resultValidation.Fecha_cierre">Fecha_cierre</th>
+                        <th scope="col" *ngIf="resultValidation.Tipo">Tipo</th>
+                        <th scope="col" *ngIf="resultValidation.cantidad">Cantidad</th>
+                        <th scope="col" *ngIf="resultValidation.Count">Count</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let row of result">
+                        <td *ngIf="row.item">{{row.item}}</td>
+                        <td *ngIf="row.Medico">{{row.Medico}}</td>
+                        <td *ngIf="row.Usuario">{{row.Usuario}}</td>
+                        <td *ngIf="row.Nombre">{{row.Nombre}}</td>
+                        <td *ngIf="row.Centro">{{row.Centro}}</td>
+                        <td *ngIf="row.Edad">{{row.Edad}}</td>
+                        <td *ngIf="row.Fecha_inicio">{{row.Fecha_inicio}}</td>
+                        <td *ngIf="row.Fecha_cierre">{{row.Fecha_cierre}}</td>
+                        <td *ngIf="row.Tipo">{{row.Tipo}}</td>
+                        <td *ngIf="row.cantidad">{{row.cantidad}}</td>
+                        <td *ngIf="row.Count">{{row.Count}}</td>
+                      </tr>
+
+                    </tbody>
+                  </table>
                   <!-- <app-crearcita></app-crearcita> -->
                 </div>
               </div>
@@ -128,6 +213,23 @@
 </section>
 <!-- /Section: boxes -->
 
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Medico</th>
+        <th scope="col">Usuario</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let row of result">
+        <th >1</th>
+        <td>{{row.Usuario}}</td>
+        <td>{{row.Medico}}</td>
+      </tr>
+
+    </tbody>
+  </table>
 <section id="callaction" class="home-section paddingtop-40">
   <div class="container">
     <div class="row">
